@@ -90,26 +90,26 @@
         
         /* Hero Section */
         .hero {
-            background: url('https://i.ibb.co/L9s3P2N/hero-bg.jpg') no-repeat center center/cover; /* Placeholder hero image */
-            min-height: 450px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
+    background: url('https://i.ibb.co/TD91sKyc/Gemini-Generated-Image-gm5xtcgm5xtcgm5x.png') no-repeat center center/cover;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: -1;
-        }
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* طبقة تعتيم خفيفة */
+    backdrop-filter: blur(10px); /* تأثير البلور القوي */
+    -webkit-backdrop-filter: blur(10px);
+    z-index: -1;
+}
 
         .hero-content {
             padding: 20px;
@@ -542,6 +542,7 @@
 </body>
 
 </html>
+
 
 
 
