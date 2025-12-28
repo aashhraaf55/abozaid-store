@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOZAID STORE - Digital Goods & Games</title>
-    <link rel="icon" href="https://i.ibb.co/377R5pP/logo.png" type="image/png"> <style>
+    <link rel="icon" href="https://i.ibb.co/8DM45Krg/Gemini-Generated-Image-oigrwmoigrwmoigr-1.png" type="image/png">
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
 
         :root {
             --main-blue: #00d4ff;
             --dark-bg: #0a0b10;
-            --card-bg: #1e2430; /* Darker card background */
+            --card-bg: #1e2430;
             --text-white: #ffffff;
             --gray-text: #b1b1b1;
             --accent-glow: 0 0 15px var(--main-blue), 0 0 30px rgba(0, 212, 255, 0.4);
@@ -23,35 +24,10 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
-            direction: rtl; /* For RTL support */
-            text-align: right; /* Default text alignment for RTL */
+            direction: rtl;
+            text-align: right;
         }
 
-        /* General styles for sections */
-        section {
-            padding: 60px 20px;
-            margin-bottom: 20px;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            color: var(--main-blue);
-            margin-bottom: 50px;
-            text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--main-blue);
-            margin: 15px auto 0;
-            border-radius: 2px;
-            box-shadow: 0 0 10px var(--main-blue);
-        }
-
-        /* Header */
         header {
             background: linear-gradient(180deg, #000 0%, rgba(0,0,0,0.7) 70%, transparent 100%);
             padding: 15px 20px;
@@ -60,7 +36,6 @@
             top: 0;
             z-index: 1000;
             backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
         }
 
         .logo-area {
@@ -71,66 +46,51 @@
         }
 
         .logo-area img {
-            max-width: 80px; /* Adjust logo size */
+            max-width: 60px;
             filter: drop-shadow(0 0 12px var(--main-blue));
-            animation: pulse 2s infinite alternate;
-        }
-
-        @keyframes pulse {
-            from { transform: scale(1); filter: drop-shadow(0 0 8px var(--main-blue)); }
-            to { transform: scale(1.05); filter: drop_shadow(0 0 15px var(--main-blue)); }
         }
 
         .logo-area h2 {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             color: var(--text-white);
             text-shadow: 0 0 5px var(--main-blue);
             margin: 0;
         }
-        
-        /* Hero Section */
-        .hero {
-    background: url('https://i.ibb.co/TD91sKyc/Gemini-Generated-Image-gm5xtcgm5xtcgm5x.png') no-repeat center center/cover;
-    min-height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-}
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* طبقة تعتيم خفيفة */
-    backdrop-filter: blur(10px); /* تأثير البلور القوي */
-    -webkit-backdrop-filter: blur(10px);
-    z-index: -1;
-}
+        /* Hero Section مع الخلفية والبلور */
+        .hero {
+            background: url('https://i.ibb.co/TD91sKyc/Gemini-Generated-Image-gm5xtcgm5xtcgm5x.png') no-repeat center center/cover;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* تعتيم */
+            backdrop-filter: blur(10px); /* البلور */
+            -webkit-backdrop-filter: blur(10px);
+            z-index: -1;
+        }
 
         .hero-content {
+            position: relative;
+            z-index: 2;
             padding: 20px;
-            max-width: 800px;
         }
 
         .hero h1 {
-            font-size: 3.8rem;
+            font-size: 3.5rem;
             color: var(--main-blue);
-            margin-bottom: 15px;
             text-shadow: var(--accent-glow);
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            color: var(--gray-text);
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-top: 10px;
         }
 
         .hero-button {
@@ -140,204 +100,50 @@
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
             box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+            transition: 0.3s;
         }
 
         .hero-button:hover {
-            background: #fff;
-            box-shadow: 0 0 25px rgba(0, 212, 255, 0.8);
-            transform: translateY(-5px) scale(1.02);
-        }
-
-        /* Container for content */
-        .container {
-            max-width: 1300px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        /* Product Grid */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            justify-content: center;
-        }
-
-        .product-card {
-            background: var(--card-bg);
-            border: 1px solid #30363d;
-            border-radius: 18px;
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-        }
-
-        .product-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            border-color: var(--main-blue);
-            box-shadow: 0 0 25px rgba(0, 212, 255, 0.4);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 180px; /* Fixed height for images */
-            object-fit: cover; /* Cover the area, crop if needed */
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            margin-bottom: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .product-card:hover .product-image {
             transform: scale(1.05);
-        }
-
-        .product-info {
-            padding: 0 20px 20px;
-            flex-grow: 1; /* Allow info to take available space */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .product-info h3 {
-            margin: 10px 0 5px;
-            color: var(--main-blue);
-            font-size: 1.6rem;
-        }
-
-        .product-info p {
-            font-size: 0.95rem;
-            color: var(--gray-text);
-            margin-bottom: 15px;
-            flex-grow: 1; /* Allow description to grow */
-        }
-
-        .price-area {
-            display: flex;
-            align-items: baseline;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .price {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--text-white);
-            margin-left: 10px; /* Space for currency */
-        }
-
-        .old-price {
-            text-decoration: line-through;
-            color: #ff6b6b; /* Softer red */
-            font-size: 1.1rem;
-            margin-right: 10px;
-        }
-
-        .buy-btn {
-            background: var(--main-blue);
-            color: var(--dark-bg);
-            border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
-        }
-
-        .buy-btn:hover {
             background: #fff;
-            color: var(--dark-bg);
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
-            transform: translateY(-3px);
         }
 
-        .badge {
-            background: #ff4d4d;
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            padding: 6px 12px;
-            font-size: 0.8rem;
-            border-radius: 8px;
-            font-weight: bold;
-            z-index: 2;
-        }
-        .badge.green {
-            background: #28a745;
-        }
+        /* تنسيق كروت المنتجات */
+        .container { max-width: 1200px; margin: auto; padding: 40px 20px; }
+        .section-title { text-align: center; color: var(--main-blue); margin-bottom: 40px; font-size: 2.5rem; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .product-card { background: var(--card-bg); border-radius: 15px; overflow: hidden; border: 1px solid #333; transition: 0.3s; position: relative; }
+        .product-card:hover { transform: translateY(-10px); border-color: var(--main-blue); }
+        .product-image { width: 100%; height: 200px; object-fit: cover; }
+        .product-info { padding: 20px; text-align: center; }
+        .price { font-size: 1.5rem; color: #fff; font-weight: bold; }
+        .old-price { text-decoration: line-through; color: #ff6b6b; margin-left: 10px; font-size: 1rem; }
+        .buy-btn { background: var(--main-blue); border: none; width: 100%; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 15px; }
+        .badge { position: absolute; top: 10px; left: 10px; background: red; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; }
 
+        footer { background: #000; padding: 30px; text-align: center; color: var(--gray-text); border-top: 1px solid #222; }
 
-        /* Footer */
-        footer {
-            background-color: #000;
-            text-align: center;
-            padding: 30px;
-            color: var(--gray-text);
-            font-size: 0.9rem;
-            border-top: 1px solid #1a1a1a;
-            margin-top: 50px;
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
         }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            .hero p {
-                font-size: 1.1rem;
-            }
-            .section-title {
-                font-size: 2.2rem;
-            }
-            .products-grid {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .hero p {
-                font-size: 1rem;
-            }
-            .section-title {
-                font-size: 1.8rem;
-            }
-            .logo-area h2 {
-                font-size: 1.8rem;
-            }
-            .logo-area img {
-                max-width: 60px;
-            }
-        }
-
     </style>
 </head>
-<>
+<body>
 
 <header>
     <div class="logo-area">
-        <img src="https://i.ibb.co/8DM45Krg/Gemini-Generated-Image-oigrwmoigrwmoigr-1.png" alt="ABOZAID STORE Logo" style="max-width: 80px; filter: drop-shadow(0 0 10px #00d4ff);">
+        <img src="https://i.ibb.co/8DM45Krg/Gemini-Generated-Image-oigrwmoigrwmoigr-1.png" alt="Logo">
         <h2>ABOZAID STORE</h2>
     </div>
 </header>
 
 <section class="hero">
     <div class="hero-content">
-        <img src="https://i.ibb.co/8DM45Krg/Gemini-Generated-Image-oigrwmoigrwmoigr-1.png" alt="Abozaid Store Big Logo" style="max-width: 250px; filter: drop-shadow(0 0 20px #00d4ff); margin-bottom: 20px; animation: pulse 2s infinite alternate;">
-        
+        <img src="https://i.ibb.co/8DM45Krg/Gemini-Generated-Image-oigrwmoigrwmoigr-1.png" alt="Big Logo" style="max-width: 250px; filter: drop-shadow(0 0 15px #00d4ff); animation: pulse 2s infinite alternate;">
         <h1>ABOZAID STORE</h1>
         <p>بوابتك لعالم الألعاب والبرامج بأقل الأسعار</p>
         <a href="#games-section" class="hero-button">ابدأ التسوق الآن</a>
@@ -347,13 +153,12 @@
 <section id="games-section" class="container">
     <h2 class="section-title">أفضل عروض الألعاب</h2>
     <div class="products-grid">
-        
         <div class="product-card">
             <span class="badge">خصم 70%</span>
-            <img src="https://i.ibb.co/XF33B6g/assassins-creed-valhalla.jpg" alt="Assassin's Creed Valhalla" class="product-image">
+            <img src="https://i.ibb.co/XF33B6g/assassins-creed-valhalla.jpg" class="product-image">
             <div class="product-info">
                 <h3>Assassin's Creed Valhalla</h3>
-                <p>إصدار Deluxe كامل. حساب يوبي سوفت جاهز للعب.</p>
+                <p>إصدار Deluxe كامل - حساب يوبي سوفت.</p>
                 <div class="price-area">
                     <span class="old-price">1200 EGP</span>
                     <span class="price">360 EGP</span>
@@ -361,13 +166,12 @@
                 <button class="buy-btn" onclick="order('Assassin\'s Creed Valhalla')">احصل عليها الآن</button>
             </div>
         </div>
-
         <div class="product-card">
-            <span class="badge green">جديد</span>
-            <img src="https://i.ibb.co/CByGv6R/cyberpunk-2077.jpg" alt="Cyberpunk 2077" class="product-image">
+            <span class="badge" style="background: green;">جديد</span>
+            <img src="https://i.ibb.co/CByGv6R/cyberpunk-2077.jpg" class="product-image">
             <div class="product-info">
                 <h3>Cyberpunk 2077</h3>
-                <p>مفتاح تفعيل Steam. استمتع بعالم المستقبل السايبربانك.</p>
+                <p>مفتاح تفعيل Steam أصلي.</p>
                 <div class="price-area">
                     <span class="old-price">800 EGP</span>
                     <span class="price">299 EGP</span>
@@ -375,176 +179,21 @@
                 <button class="buy-btn" onclick="order('Cyberpunk 2077')">اشتري الآن</button>
             </div>
         </div>
-
-        <div class="product-card">
-            <span class="badge">خصم 60%</span>
-            <img src="https://i.ibb.co/BnmW0m2/red-dead-redemption-2.jpg" alt="Red Dead Redemption 2" class="product-image">
-            <div class="product-info">
-                <h3>Red Dead Redemption 2</h3>
-                <p>حساب روكستار أوفلاين. تجربة الغرب المتوحش.</p>
-                <div class="price-area">
-                    <span class="old-price">750 EGP</span>
-                    <span class="price">299 EGP</span>
-                </div>
-                <button class="buy-btn" onclick="order('Red Dead Redemption 2')">اطلب لعبتك</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <span class="badge">حصري</span>
-            <img src="https://i.ibb.co/W2W7YpM/god-of-war.jpg" alt="God of War" class="product-image">
-            <div class="product-info">
-                <h3>God of War (PC)</h3>
-                <p>مفتاح تفعيل Steam. انطلق في رحلة كريتوس الملحمية.</p>
-                <div class="price-area">
-                    <span class="old-price">600 EGP</span>
-                    <span class="price">220 EGP</span>
-                </div>
-                <button class="buy-btn" onclick="order('God of War')">اشتري الآن</button>
-            </div>
-        </div>
-        
-    </div>
-</section>
-
-<section id="software-section" class="container">
-    <h2 class="section-title">برامج واشتراكات أساسية</h2>
-    <div class="products-grid">
-
-        <div class="product-card">
-            <span class="badge">الأكثر مبيعاً</span>
-            <img src="https://i.ibb.co/rQhY8QY/windows-11.jpg" alt="Windows 11 Pro Key" class="product-image">
-            <div class="product-info">
-                <h3>Windows 11 Pro Key</h3>
-                <p>سيريال أصلي مدى الحياة يدعم التحديثات.</p>
-                <div class="price-area">
-                    <span class="old-price">400 EGP</span>
-                    <span class="price">150 EGP</span>
-                </div>
-                <button class="buy-btn" onclick="order('Windows 11 Pro Key')">اشتري الآن</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <span class="badge green">فوري</span>
-            <img src="https://i.ibb.co/VMy46H8/chatgpt-plus.jpg" alt="ChatGPT Plus (Shared)" class="product-image">
-            <div class="product-info">
-                <h3>ChatGPT Plus (حساب مشترك)</h3>
-                <p>استمتع بمميزات GPT-4 و DALL-E 3.</p>
-                <div class="price-area">
-                    <span class="old-price">600 EGP</span>
-                    <span class="price">250 EGP</span>
-                </div>
-                <button class="buy-btn" onclick="order('ChatGPT Plus Shared')">احصل على اشتراكك</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <span class="badge">عروض خاصة</span>
-            <img src="https://i.ibb.co/hV7W28Y/discord-nitro.jpg" alt="Discord Nitro (1 Month)" class="product-image">
-            <div class="product-info">
-                <h3>Discord Nitro (شهر)</h3>
-                <p>تفعيل رسمي على حسابك الشخصي.</p>
-                <div class="price-area">
-                    <span class="old-price">350 EGP</span>
-                    <span class="price">190 EGP</span>
-                </div>
-                <button class="buy-btn" onclick="order('Discord Nitro 1 Month')">تفعيل فوري</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <span class="badge">أصلي</span>
-            <img src="https://i.ibb.co/k2D53Y5/office-365.jpg" alt="Office 365 Account" class="product-image">
-            <div class="product-info">
-                <h3>Office 365 (5 أجهزة)</h3>
-                <p>ايميل رسمي مع 1 تيرابايت مساحة تخزين سحابية.</p>
-                <div class="price-area">
-                    <span class="old-price">300 EGP</span>
-                    <span class="price">120 EGP</span>
-                </div>
-                <button class="buy-btn" onclick="order('Office 365 Account')">اشتري الآن</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <span class="badge">خصم 50%</span>
-            <img src="https://i.ibb.co/X8Yd41T/windows-10.jpg" alt="Windows 10 Pro Key" class="product-image">
-            <div class="product-info">
-                <h3>Windows 10 Pro Key</h3>
-                <p>سيريال أصلي مدى الحياة، يدعم الترقية لـ Win 11.</p>
-                <div class="price-area">
-                    <span class="old-price">300 EGP</span>
-                    <span class="price">100 EGP</span>
-                </div>
-                <button class="buy-btn" onclick="order('Windows 10 Pro Key')">اشتري الآن</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <span class="badge green">مميز</span>
-            <img src="https://i.ibb.co/N7L1kS6/spotify-premium.jpg" alt="Spotify Premium" class="product-image">
-            <div class="product-info">
-                <h3>Spotify Premium (سنة)</h3>
-                <p>استمتع بالموسيقى بلا حدود وبدون إعلانات.</p>
-                <div class="price-area">
-                    <span class="old-price">200 EGP</span>
-                    <span class="price">99 EGP</span>
-                </div>
-                <button class="buy-btn" onclick="order('Spotify Premium 1 Year')">تفعيل فوري</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <span class="badge">شحن فوري</span>
-            <img src="https://i.ibb.co/zXqGk1d/steam-gift-card.jpg" alt="Steam Gift Card" class="product-image">
-            <div class="product-info">
-                <h3>بطاقة هدايا Steam (20$)</h3>
-                <p>اشحن رصيدك على Steam واشتري ألعابك المفضلة.</p>
-                <div class="price-area">
-                    <span class="old-price">750 EGP</span>
-                    <span class="price">650 EGP</span>
-                </div>
-                <button class="buy-btn" onclick="order('Steam Gift Card 20$')">اشحن رصيدك</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <span class="badge">عروض حصرية</span>
-            <img src="https://i.ibb.co/GvxYvX7/valorant-points.jpg" alt="Valorant Points" class="product-image">
-            <div class="product-info">
-                <h3>Valorant Points (1000 VP)</h3>
-                <p>احصل على أحدث السكنات والمزايا في لعبة Valorant.</p>
-                <div class="price-area">
-                    <span class="old-price">300 EGP</span>
-                    <span class="price">220 EGP</span>
-                </div>
-                <button class="buy-btn" onclick="order('Valorant Points 1000VP')">اشحن الآن</button>
-            </div>
-        </div>
-        
     </div>
 </section>
 
 <footer>
     <p>جميع الحقوق محفوظة لمتجر ABOZAID STORE © 2025</p>
-    <p>للدعم الفني والاستفسارات: تواصل معنا عبر واتساب</p>
+    <p>تواصل معنا عبر واتساب للدعم الفني</p>
 </footer>
 
 <script>
     function order(productName) {
-        const phone = "+2010556697933"; // **** استبدل هذا الرقم برقم الواتساب الخاص بك ****
-        const message = encodeURIComponent(`مرحباً Abozaid Store، أود طلب المنتج التالي: ${productName}.`);
+        const phone = "+2010556697933"; 
+        const message = encodeURIComponent(`مرحباً Abozaid Store، أود طلب: ${productName}`);
         window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
     }
 </script>
 
 </body>
-
 </html>
-
-
-
-
-
-
