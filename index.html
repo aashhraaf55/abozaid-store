@@ -21,115 +21,41 @@
             background-color: var(--dark-bg);
             color: var(--text-white);
             font-family: 'Cairo', sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            direction: rtl;
-            text-align: right;
+            margin: 0; padding: 0; overflow-x: hidden;
+            direction: rtl; text-align: right;
         }
 
         header {
             background: linear-gradient(180deg, #000 0%, rgba(0,0,0,0.7) 70%, transparent 100%);
-            padding: 15px 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            padding: 15px 20px; text-align: center; position: sticky; top: 0; z-index: 1000;
             backdrop-filter: blur(5px);
         }
 
-        .logo-area {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
+        .logo-area { display: flex; align-items: center; justify-content: center; gap: 15px; }
+        .logo-area img { max-width: 80px; filter: drop-shadow(0 0 12px var(--main-blue)); }
+        .logo-area h2 { font-size: 2.2rem; text-shadow: 0 0 5px var(--main-blue); margin: 0; }
 
-        .logo-area img {
-            max-width: 60px;
-            filter: drop-shadow(0 0 12px var(--main-blue));
-        }
-
-        .logo-area h2 {
-            font-size: 1.8rem;
-            color: var(--text-white);
-            text-shadow: 0 0 5px var(--main-blue);
-            margin: 0;
-        }
-
-        /* Hero Section مع الخلفية والبلور */
         .hero {
             background: url('https://i.ibb.co/TD91sKyc/Gemini-Generated-Image-gm5xtcgm5xtcgm5x.png') no-repeat center center/cover;
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
+            min-height: 450px; display: flex; align-items: center; justify-content: center;
+            text-align: center; position: relative; z-index: 1;
         }
 
         .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* تعتيم */
-            backdrop-filter: blur(10px); /* البلور */
-            -webkit-backdrop-filter: blur(10px);
-            z-index: -1;
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.6); z-index: -1;
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            padding: 20px;
-        }
+        .hero h1 { font-size: 3.8rem; color: var(--main-blue); text-shadow: var(--accent-glow); }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            color: var(--main-blue);
-            text-shadow: var(--accent-glow);
-            margin-top: 10px;
-        }
-
-        .hero-button {
-            background: var(--main-blue);
-            color: var(--dark-bg);
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
-            box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
-            transition: 0.3s;
-        }
-
-        .hero-button:hover {
-            transform: scale(1.05);
-            background: #fff;
-        }
-
-        /* تنسيق كروت المنتجات */
-        .container { max-width: 1200px; margin: auto; padding: 40px 20px; }
-        .section-title { text-align: center; color: var(--main-blue); margin-bottom: 40px; font-size: 2.5rem; }
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .product-card { background: var(--card-bg); border-radius: 15px; overflow: hidden; border: 1px solid #333; transition: 0.3s; position: relative; }
+        .container { max-width: 1300px; margin: auto; padding: 20px; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .product-card { background: var(--card-bg); border: 1px solid #30363d; border-radius: 18px; text-align: center; padding: 20px; transition: 0.3s; }
         .product-card:hover { transform: translateY(-10px); border-color: var(--main-blue); }
-        .product-image { width: 100%; height: 200px; object-fit: cover; }
-        .product-info { padding: 20px; text-align: center; }
-        .price { font-size: 1.5rem; color: #fff; font-weight: bold; }
-        .old-price { text-decoration: line-through; color: #ff6b6b; margin-left: 10px; font-size: 1rem; }
-        .buy-btn { background: var(--main-blue); border: none; width: 100%; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 15px; }
-        .badge { position: absolute; top: 10px; left: 10px; background: red; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; }
-
-        footer { background: #000; padding: 30px; text-align: center; color: var(--gray-text); border-top: 1px solid #222; }
-
-        @keyframes pulse {
-            from { transform: scale(1); }
-            to { transform: scale(1.05); }
-        }
+        .product-image { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+        .buy-btn { background: var(--main-blue); border: none; padding: 12px; width: 100%; border-radius: 8px; font-weight: bold; cursor: pointer; }
+        
+        footer { background: #000; padding: 30px; text-align: center; border-top: 1px solid #1a1a1a; margin-top: 50px; }
     </style>
 </head>
 <body>
@@ -143,48 +69,31 @@
 
 <section class="hero">
     <div class="hero-content">
-        <img src="https://i.ibb.co/8DM45Krg/Gemini-Generated-Image-oigrwmoigrwmoigr-1.png" alt="Big Logo" style="max-width: 250px; filter: drop-shadow(0 0 15px #00d4ff); animation: pulse 2s infinite alternate;">
         <h1>ABOZAID STORE</h1>
         <p>بوابتك لعالم الألعاب والبرامج بأقل الأسعار</p>
-        <a href="#games-section" class="hero-button">ابدأ التسوق الآن</a>
     </div>
 </section>
 
 <section id="games-section" class="container">
-    <h2 class="section-title">أفضل عروض الألعاب</h2>
+    <h2 style="text-align: center; color: var(--main-blue); font-size: 2.5rem;">أفضل عروض الألعاب</h2>
     <div class="products-grid">
         <div class="product-card">
-            <span class="badge">خصم 70%</span>
-            <img src="https://i.ibb.co/XF33B6g/assassins-creed-valhalla.jpg" class="product-image">
-            <div class="product-info">
-                <h3>Assassin's Creed Valhalla</h3>
-                <p>إصدار Deluxe كامل - حساب يوبي سوفت.</p>
-                <div class="price-area">
-                    <span class="old-price">1200 EGP</span>
-                    <span class="price">360 EGP</span>
-                </div>
-                <button class="buy-btn" onclick="order('Assassin\'s Creed Valhalla')">احصل عليها الآن</button>
-            </div>
+            <h3>Cyberpunk 2077</h3>
+            <p>مفتاح تفعيل Steam أصلي.</p>
+            <span style="font-size: 1.5rem; color: #fff;">299 EGP</span>
+            <button class="buy-btn" onclick="order('Cyberpunk 2077')">اشتري الآن</button>
         </div>
         <div class="product-card">
-            <span class="badge" style="background: green;">جديد</span>
-            <img src="https://i.ibb.co/CByGv6R/cyberpunk-2077.jpg" class="product-image">
-            <div class="product-info">
-                <h3>Cyberpunk 2077</h3>
-                <p>مفتاح تفعيل Steam أصلي.</p>
-                <div class="price-area">
-                    <span class="old-price">800 EGP</span>
-                    <span class="price">299 EGP</span>
-                </div>
-                <button class="buy-btn" onclick="order('Cyberpunk 2077')">اشتري الآن</button>
-            </div>
+            <h3>Assassin's Creed Valhalla</h3>
+            <p>إصدار Deluxe كامل.</p>
+            <span style="font-size: 1.5rem; color: #fff;">360 EGP</span>
+            <button class="buy-btn" onclick="order('Assassin\'s Creed Valhalla')">احصل عليها الآن</button>
         </div>
     </div>
 </section>
 
 <footer>
     <p>جميع الحقوق محفوظة لمتجر ABOZAID STORE © 2025</p>
-    <p>تواصل معنا عبر واتساب للدعم الفني</p>
 </footer>
 
 <script>
